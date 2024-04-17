@@ -10,36 +10,41 @@
     <body>
         <header>
             <div id = "bandeau">
-                <img id = "logo" src="./images/logo/prograpassion.png" alt="Logo de Progra Passion">
-            </div>
-            <div id = "sousbandeau">
+                <div id = "surbandeau">
+                    <img id = "logo" src="./images/logo/prograpassion.png" alt="Logo de Progra Passion">   
+                </div>
                 <nav>
                     <ul class = "navigation">
-                        <div class="navbouton"><p>Les meilleurs langages</p></div>
-                        <div class="navbouton"><p>Articles populaires</p></div>
-                        <div class="navbouton"><p>Les événements à venir</p></div>
-                        <div class="navbouton"><p>S'inscrire</p></div>
+                        <a class="navbouton" href="#languages" ><p>Les meilleurs langages</p></a>
+                        <a class="navbouton" href="#articles" ><p>Articles populaires</p></a>
+                        <a class="navbouton" href="#pistache" ><p>Les événements à venir</p></a>
+                        <a class="navbouton" href="#pistache" ><p>S'inscrire</p></a>
                     </ul>
                 </nav>
-            </div>     
+                <div id = "recherche">
+                    <input id ="rechbar" type="text" size="20">
+                    <a href="#"><img src="./images/icons/recherche.svg" style="height: 25px; margin-bottom: -5px; margin-left: -35px;"></a>
+                </div>
+                
+            </div>  
+            
         </header>
             
             
         
     
-                <div>
+                <div class = description>
                     Quel langage apprendre en 2024 ?
                     Débutant ou expert, tout le monde y trouve son compte
                     <br>
-                    <input type="text" size="20">
-                    <a href="#">Rechercher</a>
+                    
                     <BR>
                     Plus de 3500 développeurs nous ont déjà rejoints
                 </div>
             
          
 
-    <div class="languages">
+    <div id="languages">
             Les meilleurs langages
             <div class = "images">
             <div class = "imgcarte">
@@ -94,28 +99,35 @@
             </div>
             Afficher plus
         </div>
-            <div>
-                <div class = "images">
-                Articles populaires     
-                <BR>               
-                <img src="./images/articles/mac.jpg" alt="mac">
-                <BR>    
-                Mac ou PC ?
-                <BR>    
-                La guerre est déclarée
-                <br>
-                <img src="./images/articles/rust.jpg" alt="rust">
-                <BR>    
-                Découvrez Rust
-                <BR>    
-                Les avantages du C++ alliés à la sécurité 
-                <br>
-                <img src="./images/articles/noCode.jpg" alt="nocode">
-                <BR>    
-                Quel avenir pour le code ?
-                <BR>    
-                Le no code va t'il changer la vie des développeurs
-                <br>
+
+        <div id="titrearticle">Articles populaires</div>
+            <div id="articles">
+            
+                <div class = "articleimages">   
+                    <div class ="article">               
+                        <img src="./images/articles/mac.jpg" alt="mac">
+                        <BR>    
+                        Mac ou PC ?
+                        <BR>    
+                        La guerre est déclarée
+                    </div>
+
+                    <div class ="article">  
+                        <img src="./images/articles/rust.jpg" alt="rust">
+                        <BR>    
+                        Découvrez Rust
+                        <BR>    
+                        Les avantages du C++ alliés à la sécurité 
+                    </div>
+
+                    <div class ="article">  
+                        <img src="./images/articles/noCode.jpg" alt="nocode">
+                        <BR>    
+                        Quel avenir pour le code ?
+                        <BR>    
+                        Le no code va t'il changer la vie des développeurs
+                    </div>
+
                 </div>
         </div>
         <div>

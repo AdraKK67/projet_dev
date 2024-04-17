@@ -3,7 +3,9 @@
     src: url(../fonts/MPLUS.ttf);
   }
 
-
+  html {
+    scroll-behavior: smooth;
+  }
 
 body {
     font-family: mplus;
@@ -11,7 +13,6 @@ body {
     color: white;
     display: inline-block;
     margin: 0;
-
     --arriere : #AEECEF;
     --bandeau : #80DED9;
     --carte : #6D9DC5;
@@ -19,44 +20,60 @@ body {
     --fonce2 : #3066BE;
     }
 
-#bandeau {
+ul {
+    padding: 0;
+    }
+
+a {
+    all: unset;
+}
+
+#surbandeau {
     width: 100%;
-    height: 25vh;
+    height: 15%;
     background-color: var(--fonce);
     display: flex;
     flex-wrap: wrap;
     border-radius: 25% 25% 50% 50% / 0% 0% 25% 25%;
-    z-index: 50;
+    padding-bottom: 1%;
     
 }
 
-#bandeau nav {
+#surbandeau nav {
     position: relative;
 }
 
-#sousbandeau {
+#bandeau {
     width: 100%;
-    height: 12vh;
-    margin-top: -3vh;
+    height: 40%;
     background-color: var(--fonce2);
     box-shadow: 0 -6vh 0 0 var(--fonce2);
     position: relative;
-    z-index: -1;
-    padding-top: 2vh;
-    
+    padding-bottom: 0.5%; 
+}
+
+#logo {
+    margin-top: 1vh;
+    height: 120px;
+    border-radius: 30px 30px 30px 30px;    
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .navigation{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
+    justify-content:space-around;
 }
 
+
+
 .navbouton {
-    width: 15%;
+    width: 20%;
     position: relative;
-    height: 6vh;
+    height: 80%;
     border: solid var(--fonce);
     display: inline-block;
     text-align: center;
@@ -64,31 +81,36 @@ body {
     line-height: 2vh; 
     border-radius: 20px;
     font-size: 100%;
-    
+    transition: 0.3s;
 
 }
 
 .navbouton:hover{
     background-color: var(--arriere);
     cursor: pointer;
+    transform: scale(1.02);
+    box-shadow: 2px 2px 15px 2px #000000;
+    color: var(--fonce2);
 }
 
+    #recherche{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-
-#logo {
-    margin-top: 1vh;
-    height:90% ;
-    margin-left: 30px;
-    border-radius: 30px 30px 30px 30px;    
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
+#rechbar{
+    width: 60%;
+    height: 30px;
+    border-radius: 5px;
 }
 
 .images{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+
     
 }
 
@@ -111,11 +133,70 @@ body {
     align-items:center;
     margin-bottom: 5vh;
     text-align: center;
+    transition: 0.3s;
+    transform: scale(1);
 }
 
 .imgcarte:hover {
     background-color: var(--bandeau);
+    transform: scale(1.02);
+    box-shadow: 5px 5px 15px 5px #000000;
+
 }
+
+.articleimages {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    
+}
+
+.article img {
+    height: 80%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.article {
+    background-color: white;
+    padding: 5px;
+    height: 80%;
+    width: 95%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    color: var(--fonce2);
+    text-align: center;
+}
+
+#articles {
+    overflow: scroll;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: center;
+    height: 100vh ;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 40px;
+    background-color: var(--bandeau);
+    border-radius: 5px;
+}
+
+#titrearticle{
+    width: 100%;
+    height: 5vh;
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: -50px;
+    font-size: larger;
+}
+
+
 
 @media screen and (max-width: 1200px) {
     
@@ -128,9 +209,7 @@ body {
     margin-bottom: 10px;
 }
 
-#sousbandeau {
-    height: 15vh;
-}
+
 }
 
 @media screen and (max-width: 700px) {
@@ -138,12 +217,45 @@ body {
     .imgcarte{
         width: 95%;
     }
-    
-    .navbouton {
-        width: 500px;
-    }
 
-    #sousbandeau {
-        height: 25vh;
-    }
-    }
+    
+
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #161616;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #a49f9f;
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+  #articles::-webkit-scrollbar {
+    width: 10px;
+    height: 800px;
+  }
+  
+  #articles::-webkit-scrollbar-track {
+    background: var(--fonce2);
+    border-radius: 10px;
+  }
+  
+  #articles::-webkit-scrollbar-thumb {
+    background: var(--fonce);
+    border-radius: 10px;
+  }
+  
+  #articles::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
